@@ -1,0 +1,53 @@
+.control_profile {
+  margin-left: auto;
+  display: block;
+  .profile {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    width: auto;
+    height: 55px;
+    &:hover {
+      background-color: rgb(67, 67, 67);;
+    }
+    .styling_profile {
+      position: relative;
+      padding: 0px 10px 0px 10px;
+      margin-left: auto;
+      .profile_svg {
+        width: auto;
+        height: 55px;
+        text-align: center;
+        .profile_img {
+          pointer-events: none;
+          border-radius: 100%;
+          width: 37px;
+          padding: 8px 0px;
+          height: 37px;
+        }
+      }
+    }
+  }
+  .name {
+    margin-left: 10px;
+    .styling_name {
+      font-family: 'Nunito Sans', sans-serif;
+      .profile_name {
+        color: #fff;
+        text-align: center;
+        padding: 18px 0px;
+        font-size: 15px;
+      }
+    }
+  }
+  .bottom_bar_open {
+    width: 105px;
+    height: 100px;
+    position: fixed;
+    background-color: red;
+  }
+  .bottom_bar_exit {
+    display: none;
+  }
+}

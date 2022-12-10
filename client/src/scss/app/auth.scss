@@ -1,0 +1,151 @@
+.section_auth {
+  padding: 180px 0px 0px 0px;
+  display: flex;
+  .auth_container {
+    margin-left: 530px;
+    width: 370px;
+    height: auto;
+    border-radius: 10px;
+    border-bottom: 1px rgb(224, 224, 224) solid;
+    background-color: rgb(255, 255, 255);
+    .logo {
+      padding: 15px 0px;
+      margin-left: 54px;
+    }
+    .auth_pol {
+      margin: 0 auto;
+      padding: 0px 0px 45px 0px;
+      .in_section {
+        border-top: 1px rgb(220, 220, 220) solid;
+        width: 300px;
+        height: auto;
+        margin: 0 auto;
+        padding: 5px 0px 0px 0px;
+        .text_login {
+          text-align: center;
+          font-family: 'Ubuntu', sans-serif;
+          font-size: 18px;
+          padding: 0px 0px 8px 1px;
+          color: rgb(161, 160, 160);
+          border-bottom: 1px rgb(220, 220, 220) solid;
+        }
+        .connect_form {
+          padding: 35px 0px 0px 0px;
+
+          .checkboxPassword_block {
+            font-size: 13px;
+            margin-bottom: 20px;
+            color: #000000bc;
+            font-family: 'Nunito Sans', sans-serif;
+            .checkbox_password {
+              cursor: pointer;
+            }
+          }
+          .back_block {
+            text-align: center;
+            margin: auto;
+            .back_style {
+              font-family: 'Nunito Sans', sans-serif;
+              background-color: #fff;
+              color: #000000;
+              text-decoration: none;
+              border: 0;
+              margin-top: 20px;
+              font-size: 16px;
+              text-align: center;
+              cursor: pointer;
+            }
+          }
+          .inp_in_log {
+            outline: none;
+            margin-bottom: 10px;
+            border: 0;
+            border-bottom: 1px rgb(152, 74, 2) solid;
+            font-size: 16px;
+            margin-bottom: 20px;
+            width: 295px;
+            font-family: 'Nunito Sans', sans-serif;
+            &::placeholder {
+              font-family: 'Nunito Sans', sans-serif;
+              font-size: 16px;
+              color: rgba(0, 0, 0, 0.596);
+            }
+          }
+          .inp_in_pas {
+            font-family: 'Nunito Sans', sans-serif;
+            outline: none;
+            margin-bottom: 10px;
+            border: 0;
+            border-bottom: 1px rgb(152, 74, 2) solid;
+            font-size: 16px;
+            width: 295px;
+            color: rgb(0, 0, 0);
+            &::placeholder {
+              font-family: 'Nunito Sans', sans-serif;
+              font-size: 16px;
+              color: rgba(0, 0, 0, 0.596);
+            }
+          }
+          .butt_in {
+            font-family: 'Nunito Sans', sans-serif;
+            margin: 0 auto;
+            color: #fff;
+            border: 0;
+            font-size: 15px;
+            border-radius: 5px;
+            width: 300px;
+            height: 37px;
+            cursor: pointer;
+            background-color: #b67851;
+            &:hover {
+              background-color: #a06849;
+            }
+            .simple-spinner {
+              margin: auto;
+              width: 15px;
+              height: 15px;
+              border: 2px #fff solid;
+              border-radius: 50%;
+              border-top-color: rgb(181, 181, 181);
+              animation: spinner 1s infinite linear;
+            }
+            @keyframes spinner {
+              0% {
+                transform: rotate(0);
+              }
+              100% {
+                transform: rotate(360deg);
+              }
+            }
+          }
+        }
+        .path_register {
+          text-align: center;
+          .back_style {
+            font-family: 'Nunito Sans', sans-serif;
+            background-color: #fff;
+            color: #000000;
+            text-decoration: none;
+            border: 0;
+            margin-top: 20px;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            a {
+              color: #000000;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .final_path {
+    margin-left: 5px;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    border-bottom: 1px rgb(224, 224, 224) solid;
+    background-color: rgb(255, 255, 255);
+  }
+}

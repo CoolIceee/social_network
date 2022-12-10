@@ -1,0 +1,116 @@
+.user_page_container {
+  width: auto;
+  height: 600px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin: 0 auto;
+  display: flex;
+  .info_page {
+    width: 230px;
+    margin: 0 auto;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px rgb(224, 224, 224) solid;
+    border-left: 1px rgb(224, 224, 224) solid;
+    border-right: 1px rgb(224, 224, 224) solid;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 25px 0px 0px 0px;
+    .addFriends {
+      border: 0;
+      background-color: rgba(152, 74, 2, 0.796);
+      width: 210px;
+      color: #fff;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: 'Nunito Sans', sans-serif;
+      border-radius: 5px;
+      height: 33px;
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 7px;
+      &:hover {
+        background-color: rgba(152, 74, 2, 0.862);
+      }
+    }
+    .addMessage {
+      border: 1px rgba(60, 60, 60, 0.391) solid;
+
+      background-color: rgba(255, 255, 255, 0.796);
+      width: 210px;
+      color: rgb(60, 60, 60);
+      font-size: 13px;
+      cursor: pointer;
+      font-family: 'Nunito Sans', sans-serif;
+      border-radius: 5px;
+      height: 33px;
+      margin: 0 auto;
+
+      display: block;
+      &:hover {
+        border: 1px rgb(0, 0, 0) solid;
+        color: rgb(0, 0, 0);
+      }
+    }
+  }
+  .user_profile_block {
+    width: 230px;
+    height: 230px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 1px rgb(224, 224, 224) solid;
+    .user_profile_image {
+      width: 210px;
+      height: 210px;
+      margin: 10px auto;
+      display: block;
+    }
+  }
+  .section_info_user {
+    width: 472px;
+    margin-left: 10px;
+
+    .user_profile_header {
+      width: 472px;
+      height: 150px;
+      border-radius: 5px;
+      background-color: rgb(255, 255, 255);
+      border: 1px rgb(224, 224, 224) solid;
+      .digitField {
+        width: 420px;
+        display: flex;
+        height: 60px;
+        margin: auto;
+        margin-top: 45px;
+        color: rgba(0, 0, 0, 0.668);
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        .friend_number_friends {
+          padding: 0px 30px 0px 0px;
+          margin-left: 50px;
+        }
+        .friend_number_subscribers {
+          padding: 0px 30px 0px 0px;
+        }
+        .friend_number_subscriptions{
+           padding: 0px 30px 0px 0px;
+        }
+        .friend_number_photo{
+
+        }
+      }
+      .user_name_block {
+        width: 420px;
+        padding: 0px 0px 5px 0px;
+        border-bottom: 2px rgb(224, 224, 224) solid;
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.8);
+        font-family: 'Roboto', sans-serif;
+        height: auto;
+        margin-top: 20px;
+        margin-left: 25px;
+      }
+    }
+  }
+}

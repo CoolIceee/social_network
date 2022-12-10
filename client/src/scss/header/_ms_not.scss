@@ -1,0 +1,47 @@
+.control_panel {
+  display: flex;
+  align-items: center;
+  .message {
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    &:hover {
+      background-color: rgb(67, 67, 67);;
+    }
+    .styling_message {
+      padding: 5px 0px 0px 0px;
+      .message_contr {
+        width: 41px;
+        height: 41px;
+        padding: 2.2px 0px 0px 7.5px;
+        .message_img {
+          pointer-events: none;
+          width: 41px;
+          height: 41px;
+        }
+      }
+    }
+  }
+  .notification {
+    cursor: pointer;
+    width: 55px;
+    align-items: center;
+    height: 55px;
+    display: flex;
+    &:hover {
+      background-color: rgb(67, 67, 67);
+    }
+    .styling_notification {
+      .notification_contr {
+        width: 25px;
+        height: 25px;
+        padding: 0px 0px 0px 14px;
+        .notification_img {
+          pointer-events: none;
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}

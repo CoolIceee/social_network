@@ -1,0 +1,261 @@
+
+
+.profile_container {
+  width: 100%;
+  .header_container {
+    width: 100%;
+    border: 1px #373737 solid;
+    border-radius: 5px;
+    .cover_block {
+      width: 100%;
+      height: 300px;
+      background-color: rgb(67, 67, 67);
+      .user_cover_image {
+        border-radius: 5px;
+        width: 100%;
+        height: 320px;
+      }
+    }
+    .info_block {
+      width: 100%;
+      height: 100px;
+      position: relative;
+      z-index: 9;
+      display: flex;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      background-color: #242424;
+      .block_button {
+        display: flex;
+        align-items: center;
+        .button_one {
+          width: 200px;
+          color: #fff;
+          border-radius: 5px;
+          border: none;
+          font-family: 'Roboto', sans-serif;
+          background-color: rgb(128, 9, 154);
+          height: 35px;
+          margin-right: 10px;
+        }
+        .button_two {
+          border-radius: 5px;
+          margin-right: 20px;
+          font-family: 'Roboto', sans-serif;
+          width: 60px;
+          font-family: 'Roboto', sans-serif;
+          color: #fff;
+          border: none;
+          background-color: rgb(75, 75, 75);
+          height: 35px;
+          .trait {
+            font-size: 15px;
+          }
+        }
+      }
+      .user_name_status {
+        width: 100%;
+        height: 30px;
+        position: relative;
+        margin-left: 30px;
+        top: 20px;
+        .user_name {
+          font-family: 'Roboto', sans-serif;
+          color: #fff;
+          font-size: 25px;
+        }
+        .user_status {
+          font-family: 'Roboto', sans-serif;
+          color: #fff;
+          margin-top: 5px;
+          margin-left: 5px;
+          font-size: 14px;
+        }
+      }
+
+      // position: relative;
+      // bottom: 70px;
+      // left: 20px;
+      // width: 150px;
+      // height: 150px;
+      // border-radius: 100%;
+      .helper_div {
+        width: 300px;
+
+        .user_avatar {
+          position: relative;
+          width: 150px;
+          height: 150px;
+          left: 20px;
+          bottom: 70px;
+          background-color: #242424;
+          border: 3px solid #242424;
+          border-radius: 50%;
+          .user_profile_image {
+            position: relative;
+            border-radius: inherit;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .section_block {
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    .left_block {
+      width: 100%;
+      .photo_gallery {
+        width: 550px;
+        height: 350px;
+        border: 1px #373737 solid;
+        background-color: #242424;
+        border-radius: 5px;
+        padding: 10px;
+        .photo {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          .photo_container {
+            width: 135.5px;
+            height: 135.5px;
+            border: 1px solid #242424;
+            border-radius: 5px;
+            .photo_user {
+              object-fit: cover;
+              border-radius: inherit;
+              width: 100%;
+              height: 100%;
+              border: 1px #373737 solid;
+            }
+          }
+        }
+        .category_block {
+          .category_gallery {
+            user-select: none;
+            padding-left: 0;
+            display: flex;
+            justify-content: space-evenly;
+            li {
+              color: #fff;
+
+              list-style-type: none;
+            }
+            .profile_icon {
+              display: flex;
+              font-family: 'Roboto', sans-serif;
+              color: #fff;
+              width: auto;
+              font-size: 14px;
+              align-items: center;
+              .profile_img {
+                width: 25px;
+                height: 25px;
+                padding: 0 5px 0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .user_profile_block {
+    width: 230px;
+    height: 230px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 1px rgb(224, 224, 224) solid;
+    .user_profile_image {
+      width: 210px;
+      height: 210px;
+      margin: 10px auto;
+      display: block;
+    }
+    .info_page {
+      width: 230px;
+      margin: 0 auto;
+      height: 100px;
+      background-color: rgb(255, 255, 255);
+      border-bottom: 1px rgb(224, 224, 224) solid;
+      border-left: 1px rgb(224, 224, 224) solid;
+      border-right: 1px rgb(224, 224, 224) solid;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      padding: 25px 0px 0px 0px;
+    }
+  }
+  .section_info_user {
+    width: 472px;
+    margin-left: 10px;
+    .my_profile_section {
+      width: 100%;
+      height: 150px;
+      background-color: rgb(255, 255, 255);
+      border: 1px rgb(224, 224, 224) solid;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    .post_form {
+      width: 100%;
+      height: 50px;
+      background-color: rgb(255, 255, 255);
+      border: 1px rgb(224, 224, 224) solid;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    .post_wall {
+      width: 100%;
+      height: 50px;
+      background-color: rgb(255, 255, 255);
+      border: 1px rgb(224, 224, 224) solid;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    .user_profile_header {
+      width: 472px;
+      height: 150px;
+      border-radius: 5px;
+      background-color: rgb(255, 255, 255);
+      border: 1px rgb(224, 224, 224) solid;
+      .digitField {
+        width: 420px;
+        display: flex;
+        height: 60px;
+        margin: auto;
+        margin-top: 45px;
+        color: rgba(0, 0, 0, 0.668);
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        .friend_number_friends {
+          padding: 0px 30px 0px 0px;
+          margin-left: 50px;
+        }
+        .friend_number_subscribers {
+          padding: 0px 30px 0px 0px;
+        }
+        .friend_number_subscriptions {
+          padding: 0px 30px 0px 0px;
+        }
+        .friend_number_photo {
+          padding: 0px 30px 0px 0px;
+        }
+      }
+      .user_name_block {
+        width: 420px;
+        padding: 0px 0px 5px 0px;
+        border-bottom: 2px rgb(224, 224, 224) solid;
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.8);
+        font-family: 'Roboto', sans-serif;
+        height: auto;
+        margin-top: 20px;
+        margin-left: 25px;
+      }
+    }
+  }
+}

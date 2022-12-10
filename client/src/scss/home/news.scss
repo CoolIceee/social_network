@@ -1,0 +1,103 @@
+.news_container {
+  width: 100%;
+  height: auto;
+  .user_post_block {
+    width: 100%;
+    height: auto;
+
+    background-color: rgb(255, 255, 255);
+    border: 1px rgb(224, 224, 224) solid;
+    border-bottom: 2px rgb(224, 224, 224) solid;
+    padding: 2rem 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    .user_text_post {
+      margin-top: 3px;
+      width: 100%;
+      color: #3e3e3e;
+      height: auto;
+      word-break: break-all;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 14px;
+    }
+  }
+  .news_header {
+    height: 35px;
+    background-color: rgb(255, 255, 255);
+    border: 1px rgb(224, 224, 224) solid;
+    border-bottom: 2px rgb(224, 224, 224) solid;
+    border-radius: 5px;
+    padding: 15px 0px 0px 20px;
+    margin-bottom: 0.5rem;
+    font-size: 15px;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  .emoji_block_exit {
+    display: none;
+  }
+  .emoji_block_open {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+  }
+  .post_form {
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    border: 1px rgb(224, 224, 224) solid;
+    border-bottom: 2px rgb(224, 224, 224) solid;
+    border-radius: 5px;
+    padding: 10px 0px;
+    display: flex;
+    .org {
+       height: 1rem;
+      border: 1px  solid  black;
+      padding: 5px 0px;
+      color: rgba(0, 0, 0, 0.538);
+      font-family: 'Nunito Sans', sans-serif;
+      text-align: center;
+      display: flex;
+      
+    }
+    .from_user_logo {
+      width: 35px;
+      height: 35px;
+      padding: 0px 10px;
+      border-radius: 100%;
+      margin-left: 7px;
+    }
+
+    .form {
+      display: flex;
+      .textarea {
+        font-family: 'Quicksand', sans-serif;
+        width: 500px;
+        height: 28px;
+        margin-top: 5px;
+        margin-left: 5px;
+        outline: none;
+        resize: none;
+        border: 0;
+        font-size: 15px;
+        overflow: hidden;
+        white-space: normal;
+        &::placeholder {
+          font-family: 'Nunito Sans', sans-serif;
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.596);
+        }
+      }
+      .button_form_add {
+        width: auto;
+        height: 30px;
+      }
+      .smile {
+        cursor: pointer;
+        padding: 4px 0px 0px 0px;
+        .img_smile {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}
