@@ -3,8 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getPosts, postText } from '../../../../store/features/posts.js'
 import { MyDataLoad } from '../../../../store/features/users'
 import Picker from 'emoji-picker-react'
-import smileIcon from '../../../../public/assets/defaultImg/icons8-показать-язык-96 (1).png'
-import defaultImg from '../../../../public/assets/defaultImg/avatar.png'
+import smileIcon from '../../../../public/assets/icons8-показать-язык-96 (1).png'
 import '../../../../scss/home/news.scss'
 import jwtDecode from 'jwt-decode'
 function PostsUsers() {
@@ -12,12 +11,8 @@ function PostsUsers() {
   const token = useSelector(state => state.authorization.token)
   const name = jwtDecode(token)
   const UserPosts = useSelector(state => state.posts.UserPosts)
-  const myDataLoad = useSelector(state => state.users.MyData)
   const [openBar, setOpenBar] = useState(false)
   const [text, setText] = useState('')
-  console.log(myDataLoad)
-
-  console.log(UserPosts)
   useEffect(() => {
     dispatch(getPosts())
     dispatch(MyDataLoad)

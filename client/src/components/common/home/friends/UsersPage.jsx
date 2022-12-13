@@ -9,7 +9,7 @@ import {
   getDataFriends,
   getUserDataFriends,
 } from '../../../../store/features/users'
-import defaultIcon from '../../../../public/assets/defaultImg/avatar.png'
+import defaultIcon from '../../../../public/assets/avatar.png'
 import jwtDecode from 'jwt-decode'
 
 function FriendsPage({ id }) {

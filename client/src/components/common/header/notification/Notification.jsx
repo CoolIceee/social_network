@@ -1,5 +1,5 @@
 import React from 'react'
-import notificationImg from '../../../../public/assets/defaultImg/icons8-notification-96 (2).png'
+import notificationImg from '../../../../public/assets/icons8-notification-96 (2).png'
 
 function Notification() {
   return (

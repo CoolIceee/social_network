@@ -1,5 +1,5 @@
 import React from 'react'
-import cookies from '../../../../public/assets/defaultImg/free-icon-flame-7111311.png'
+import cookies from '../../../../public/assets/free-icon-flame-7111311.png'
 import '../../../../scss/header/_logo.scss'
 
 function Logo() {

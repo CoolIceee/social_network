@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import './Modal.css'
 import { API_URL } from '../../../config'
-import avatarLogo from '../../../public/assets/defaultImg/avatar.png'
+import avatarLogo from '../../../public/assets/avatar.png'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import right from '../../../public/assets/defaultImg/icons8-шеврон-вправо-50.png'
-import left from '../../../public/assets/defaultImg/icons8-шеврон-влево-50.png'
+import right from '../../../public/assets/icons8-шеврон-вправо-50.png'
+import left from '../../../public/assets/icons8-шеврон-влево-50.png'
 
 const Modal = ({ photographyPath, pho }) => {
   const navigate = useNavigate()

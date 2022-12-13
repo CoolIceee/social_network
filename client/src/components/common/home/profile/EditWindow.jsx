@@ -1,27 +1,42 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { createAvatar } from '../../../../store/features/users'
-import "./edit.css"
-// import Modal from '../../Modal/Modal'
-function EditWindow({ a, b }) {
-  const [file, setFile] = useState()
-  const [modalActive, setModalActive] = useState(false)
-  const dispatch = useDispatch()
-  const createPhotoHandler = () => {
-    dispatch(createAvatar(file))
-  setModalActive(true)
-  }
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import basket from '../../../../public/assets/icons8-очистить-корзину-48.png'
+import gallery from '../../../../public/assets/icons8-стопка-фотографий-48.png'
+import pen from '../../../../public/assets/icons8-шариковая-ручка-48 (1).png'
+import jwtDecode from 'jwt-decode'
+
+import './edit.scss'
+import { useSelector } from 'react-redux'
+
+
+function EditWindow({ myAvatar }) {
+
+  const token = useSelector(state => state.authorization.token)
+
+  const name = jwtDecode(token)
+
+  console.log(myAvatar)
   return (
     <div className='edit_window_container'>
       <ul className='menu_buttons'>
-        <li>Обновить фотографию</li>
+        <NavLink to={'/update/' + name.login}>
+          <li>
+            <img className='icon_button' src={pen} alt='err' />
+            Обновить фотографию
+          </li>
+        </NavLink>
+        <NavLink to={myAvatar}>
+          <li>
+            <img className='icon_button' src={gallery} alt='err' />
+            Открыть фотографию
+          </li>
+        </NavLink>
+
         <li>
-          <input type={'file'} onChange={e => setFile(e.target.files[0])} />
-          <button onClick={createPhotoHandler}>отправить фото</button>
+          <img className='icon_button' src={basket} alt='err' />
+          Удалить фотографию
         </li>
-        <li>Удалить фотографию</li>
       </ul>
-      {/* <Modal active={modalActive} setActive={setModalActive} /> */}
     </div>
   )
 }

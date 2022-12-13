@@ -2,10 +2,10 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import jwtDecode from 'jwt-decode'
-import MyProfileIcon from '../../../public/assets/defaultImg/icons8-пользователь-мужчина-в-кружке-48 (2).png'
-import newsIcon from '../../../public/assets/defaultImg/icons8-лента-новостей-48.png'
-import friendsIcon from '../../../public/assets/defaultImg/icons8-группа-пользователей,-мужчины-48.png'
-import messageIcon from '../../../public/assets/defaultImg/icons8-чат-48.png'
+import MyProfileIcon from '../../../public/assets/icons8-пользователь-мужчина-в-кружке-48 (2).png'
+import newsIcon from '../../../public/assets/icons8-лента-новостей-48.png'
+import friendsIcon from '../../../public/assets/icons8-группа-пользователей,-мужчины-48.png'
+import messageIcon from '../../../public/assets/icons8-чат-48.png'
 function NavBar() {
 
   const token = useSelector(state => state.authorization.token)

@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import jwtDecode from 'jwt-decode'
 import { createMessage, oneChat } from '../../../../store/features/messages.js'
 import Picker from 'emoji-picker-react'
-import smileIcon from '../../../../public/assets/defaultImg/icons8-показать-язык-96 (1).png'
-import addIcon from '../../../../public/assets/defaultImg/icons8-отправлено-96.png'
+import smileIcon from '../../../../public/assets/icons8-показать-язык-96 (1).png'
+import addIcon from '../../../../public/assets/icons8-отправлено-96.png'
 import { useNavigate } from 'react-router-dom'
 
 function Message({ socket, oneChatId }) {

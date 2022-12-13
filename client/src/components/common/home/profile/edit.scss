@@ -1,0 +1,41 @@
+.edit_window_container {
+  z-index: 9;
+  width: 220px;
+  height: 270px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  .menu_buttons {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(50, 50, 50);
+    list-style: none;
+    a {
+      text-decoration: none;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      padding: 5px 0;
+      cursor: pointer;
+         font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      height: 35px;
+      color: #fff;
+      .icon_button {
+        width: 20px;
+        height: 20px;
+        padding: 0px 10px;
+      }
+    }
+    li:hover {
+      background-color: rgb(40, 40, 40);
+    }
+  }
+}

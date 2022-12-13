@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { MyDataLoad } from '../../../../store/features/users'
 import '../../../../scss/home/interface/my_profile.scss'
-import avatarLogo from '../../../../public/assets/defaultImg/avatar.png'
+import avatarLogo from '../../../../public/assets/avatar.png'
 import { API_URL } from '../../../../config'
-import cover from '../../../../public/assets/defaultImg/158348898519.jpg'
-import photo from '../../../../public/assets/defaultImg/icons8-стопка-фотографий-64.png'
-import muz from '../../../../public/assets/defaultImg/icons8-airpods-48.png'
-import clips from '../../../../public/assets/defaultImg/icons8-воспроизвести-видео-на-ноутбуке-64.png'
+import cover from '../../../../public/assets/Q7fJnM254V8.jpg'
+import photo from '../../../../public/assets/icons8-стопка-фотографий-64.png'
+import muz from '../../../../public/assets/icons8-airpods-48.png'
+import clips from '../../../../public/assets/icons8-воспроизвести-видео-на-ноутбуке-64.png'
 import { NavLink } from 'react-router-dom'
 import EditWindow from './EditWindow'
 function MyProfile() {
@@ -43,7 +43,11 @@ function MyProfile() {
                       }
                       alt='err'
                     />
-                    {modal ? <EditWindow /> : console.log('a')}
+                    {modal ? (
+                      <EditWindow myAvatar={item.logoUser} />
+                    ) : (
+                      console.log('a')
+                    )}
                   </div>
                 </div>
                 <div className='user_name_status'>

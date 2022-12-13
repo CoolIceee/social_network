@@ -10,7 +10,6 @@ function SingIn() {
   const [password, setPassword] = useState('')
   const [checkbox, setCheckbox] = useState(false)
 
-  //поработать над прилоадером
   const siningIn = useSelector(state => state.authorization.siningIn)
 
   const dispatch = useDispatch()

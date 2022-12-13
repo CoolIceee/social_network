@@ -2,7 +2,7 @@ import Name from './Name/Name'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-import defaultIcon from '../../../../public/assets/defaultImg/avatar.png'
+import defaultIcon from '../../../../public/assets/avatar.png'
 import { API_URL } from '../../../../config'
 function Profile() {
   const token = useSelector(state => state.authorization.token)

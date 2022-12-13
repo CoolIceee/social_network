@@ -19,6 +19,7 @@ import {
   MyDataLoad,
   getDataFriends,
 } from '../../../store/features/users'
+import SettingsProfile from '../../app/settings/SettingsProfile'
 
 function Home({ socket }) {
   const dispatch = useDispatch()
@@ -46,16 +47,14 @@ function Home({ socket }) {
     <section className='section'>
       <Navigation />
       <Routes>
+        <Route path={'/update/' + name.login} element={<SettingsProfile />} />
         {dataChats.length !== 0 ? (
           chatData.map(chatId => {
             dispatch(oneChat(chatId._id))
 
             return (
               <>
-                <Route
-                  path='messages'
-                  element={<Chat socket={socket}  />}
-                />
+                <Route path='messages' element={<Chat socket={socket} />} />
                 <Route
                   path={`chat/${chatId._id}`}
                   element={<Message socket={socket} oneChatId={chatId._id} />}
@@ -76,9 +75,7 @@ function Home({ socket }) {
               return (
                 <Route
                   path={`${name.login + '/' + photo}`}
-                  element={
-                    <ModalUser on photographyPath={photo} pho={index} />
-                  }
+                  element={<ModalUser on photographyPath={photo} pho={index} />}
                 />
               )
             })
