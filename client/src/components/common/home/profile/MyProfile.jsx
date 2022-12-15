@@ -8,8 +8,9 @@ import cover from '../../../../public/assets/Q7fJnM254V8.jpg'
 import photo from '../../../../public/assets/icons8-стопка-фотографий-64.png'
 import muz from '../../../../public/assets/icons8-airpods-48.png'
 import clips from '../../../../public/assets/icons8-воспроизвести-видео-на-ноутбуке-64.png'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 import EditWindow from './EditWindow'
+import BlankPhotos from './EmptyProfile/BlankPhotos'
 function MyProfile() {
   const dispatch = useDispatch()
   const [modal, setModal] = useState(false)
@@ -44,7 +45,9 @@ function MyProfile() {
                       alt='err'
                     />
                     {modal ? (
-                      <EditWindow myAvatar={item.logoUser} />
+                      <EditWindow
+                        myAvatar={item.logoUser}
+                      />
                     ) : (
                       console.log('a')
                     )}
@@ -87,27 +90,48 @@ function MyProfile() {
                       </li>
                     </ul>
                   </div>
-                  <div className='photo'>
-                    {[...item.photo]
-                      .reverse()
-                      .slice(0, 8)
-                      .map(photo => {
-                        return (
-                          <>
-                            <NavLink to={photo}>
-                              <div key={item} className='photo_container'>
-                                <img
-                                  className='photo_user'
-                                  src={
-                                    photo ? `${API_URL + photo}` : avatarLogo
+                  <div
+                    className='photo'
+                    style={
+                      item.photo.length >= 3
+                        ? { display: 'flex', flexWrap: 'wrap' }
+                        : null
+                    }
+                  >
+                    {item.photo.length === 0 ? (
+                      <BlankPhotos text='фотографии нет' />
+                    ) : (
+                      [...item.photo]
+                        .reverse()
+                        .slice(0, 8)
+                        .map(photo => {
+                          console.log(item.photo.length)
+                          return (
+                            <>
+                              <Outlet />
+                              <NavLink to={photo.slice(0, 20)}>
+                                <div
+                                  key={item}
+                                  className='photo_container'
+                                  style={
+                                    item.photo.length >= 3
+                                      ? { width: '135.5px', height: '135.5px' }
+                                      : null
                                   }
-                                  alt='err'
-                                />
-                              </div>
-                            </NavLink>
-                          </>
-                        )
-                      })}
+                                >
+                                  <img
+                                    className='photo_user'
+                                    src={
+                                      photo ? `${API_URL + photo}` : avatarLogo
+                                    }
+                                    alt='err'
+                                  />
+                                </div>
+                              </NavLink>
+                            </>
+                          )
+                        })
+                    )}
                   </div>
                   <div></div>
                 </div>

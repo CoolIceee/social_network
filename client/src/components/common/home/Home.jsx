@@ -69,17 +69,19 @@ function Home({ socket }) {
         )}
         <Route path='/*' element={<Main />}>
           <Route index element={<News />} />
-          <Route path={`${name.login}`} element={<MyProfile />} />
-          {myDataLoad.map(item => {
-            return item.photo.map((photo, index) => {
-              return (
-                <Route
-                  path={`${name.login + '/' + photo}`}
-                  element={<ModalUser on photographyPath={photo} pho={index} />}
-                />
-              )
-            })
-          })}
+          <Route path={`${name.login}`} element={<MyProfile />}>
+            {myDataLoad.map(item => {
+              return item.photo.map((photo, index) => {
+                return (
+                  <Route
+                    path={`${photo.slice(0, 20)}`}
+                    element={<ModalUser photographyPath={photo} pho={index} />}
+                  />
+                )
+              })
+            })}
+          </Route>
+
           <Route path='friends' element={<Friends />} />
           {getUsers.map(users => {
             return (

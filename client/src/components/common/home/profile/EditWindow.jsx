@@ -8,14 +8,11 @@ import jwtDecode from 'jwt-decode'
 import './edit.scss'
 import { useSelector } from 'react-redux'
 
-
 function EditWindow({ myAvatar }) {
-
   const token = useSelector(state => state.authorization.token)
 
   const name = jwtDecode(token)
 
-  console.log(myAvatar)
   return (
     <div className='edit_window_container'>
       <ul className='menu_buttons'>
@@ -25,12 +22,19 @@ function EditWindow({ myAvatar }) {
             Обновить фотографию
           </li>
         </NavLink>
-        <NavLink to={myAvatar}>
+        {myAvatar ? (
+          <NavLink to={myAvatar.slice(0, 20)}>
+            <li>
+              <img className='icon_button' src={gallery} alt='err' />
+              Открыть фотографию
+            </li>
+          </NavLink>
+        ) : (
           <li>
             <img className='icon_button' src={gallery} alt='err' />
             Открыть фотографию
           </li>
-        </NavLink>
+        )}
 
         <li>
           <img className='icon_button' src={basket} alt='err' />

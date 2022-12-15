@@ -102,7 +102,7 @@ function FriendsPage({ id }) {
           <div className='user_profile_block'>
             <img
               className='user_profile_image'
-              src={require(`../../../../public/assets/userImg/${datePageUsers.logoUser}`)}
+              src={require(`../../../../public/assets/${datePageUsers.logoUser}`)}
               alt='err'
             />
           </div>

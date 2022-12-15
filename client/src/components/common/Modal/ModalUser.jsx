@@ -29,6 +29,7 @@ const Modal = ({ photographyPath, pho }) => {
     }
     setCounter(counter + 1)
   }
+  console.log('@@', photographyPath, 'aa', data)
   return myDataLoad.map(item => {
     return (
       <div onClick={() => navigate(-1)} className='modal'>

@@ -101,18 +101,18 @@
       width: 100%;
       .photo_gallery {
         width: 550px;
-        height: 350px;
+        height: auto;
         border: 1px #373737 solid;
         background-color: #242424;
         border-radius: 5px;
         padding: 10px;
         .photo {
           width: 100%;
-          display: flex;
-          flex-wrap: wrap;
+          // display: flex;
+          // flex-wrap: wrap;
           .photo_container {
-            width: 135.5px;
-            height: 135.5px;
+            width: 100%;
+            height: 200px;
             border: 1px solid #242424;
             border-radius: 5px;
             .photo_user {
