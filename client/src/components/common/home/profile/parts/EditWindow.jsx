@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import basket from '../../../../public/assets/icons8-очистить-корзину-48.png'
-import gallery from '../../../../public/assets/icons8-стопка-фотографий-48.png'
-import pen from '../../../../public/assets/icons8-шариковая-ручка-48 (1).png'
+import basket from '../../../../../public/assets/icons8-очистить-корзину-48.png'
+import gallery from '../../../../../public/assets/icons8-стопка-фотографий-48.png'
+import pen from '../../../../../public/assets/icons8-шариковая-ручка-48 (1).png'
 import jwtDecode from 'jwt-decode'
 
 import './edit.scss'

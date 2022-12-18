@@ -27,7 +27,7 @@ function Home({ socket }) {
   const getUsers = useSelector(state => state.users.getUsers)
   const myDataLoad = useSelector(state => state.users.MyData)
   const name = jwtDecode(token)
-  const dataChats = useSelector(state => state.messages.dataChats)
+  const dataChats = useSelector(state => state.messages.dataChats) 
 
   useEffect(() => {
     dispatch(getDataFriends())
@@ -41,7 +41,7 @@ function Home({ socket }) {
   }
   const chatData = dataChats.map(users => {
     return users
-  })
+  }) 
 
   return (
     <section className='section'>

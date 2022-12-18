@@ -9,13 +9,14 @@ import photo from '../../../../public/assets/icons8-стопка-фотогра�
 import muz from '../../../../public/assets/icons8-airpods-48.png'
 import clips from '../../../../public/assets/icons8-воспроизвести-видео-на-ноутбуке-64.png'
 import { NavLink, Outlet } from 'react-router-dom'
-import EditWindow from './EditWindow'
+import EditWindow from './parts/EditWindow'
 import BlankPhotos from './EmptyProfile/BlankPhotos'
+import FriendsDepartment from './parts/FriendsDepartment'
 function MyProfile() {
   const dispatch = useDispatch()
   const [modal, setModal] = useState(false)
   useEffect(() => {
-    dispatch(MyDataLoad)
+    dispatch(MyDataLoad())
   }, [dispatch])
   const myDataLoad = useSelector(state => state.users.MyData)
   const isLoading = useSelector(state => state.users.isLoading)
@@ -47,7 +48,7 @@ function MyProfile() {
                     {modal ? (
                       <EditWindow myAvatar={item.logoUser} />
                     ) : (
-                      console.log('a')
+                      null
                     )}
                   </div>
                 </div>
@@ -103,7 +104,6 @@ function MyProfile() {
                         .reverse()
                         .slice(0, 8)
                         .map(photo => {
-                          console.log(item.photo.length)
                           return (
                             <>
                               <Outlet />
@@ -134,7 +134,9 @@ function MyProfile() {
                   <div></div>
                 </div>
               </div>
-              <div className='right_block'></div>
+              <div className='right_block'>
+                <FriendsDepartment/>
+              </div>
             </div>
           </div>
           // <div className='section_my_profile'>
